@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.json": "go.sum",
+        "memory": "cpp"
+    }
+}
