@@ -24,7 +24,7 @@ void RenderWindow::initializeGL() {
         "#version 330 core\n"
         "out vec4 col;\n"
         "void main() {\n"
-        "col = vec4(1.0, 0.0, 0.0, 1.0); }";
+        "col = vec4(0.0, 0.0, 1.0, 1.0); }";
     shaderProgram = new QOpenGLShaderProgram(this);
     shaderProgram->addShaderFromSourceCode(QOpenGLShader::Vertex, vertexShaderSource);
     shaderProgram->addShaderFromSourceCode(QOpenGLShader::Fragment, fragmentShaderSource);
@@ -32,7 +32,7 @@ void RenderWindow::initializeGL() {
     // The vertex coordinates of our triangle
     GLfloat vertices[] = {
                           -1.0f, -1.0f,
-                          1.0f, -1.0f,
+                          0.5f, -1.0f,
                           0.0f, 1.0f };
     vao = new QOpenGLVertexArrayObject();
     vao->create();
